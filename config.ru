@@ -1,2 +1,2 @@
-require './splash.html'
+require './server.rb'
 run Sinatra::Application
