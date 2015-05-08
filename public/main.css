@@ -1,0 +1,23 @@
+body {
+	background-color: black;
+	background-image: url('mad_log_black.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+}
+
+#MAD-info{
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	text-align: center;
+	margin-top: 40%;
+	text-transform: uppercase;
+}
+
+#contact{
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	text-align: center;
+	margin-top: 10%;
+	text-transform: uppercase;	
+}
