@@ -29,7 +29,12 @@ Instagram.configure do |config|
 end
 
 get "/" do
-  '<a href="/oauth/connect">Connect with Instagram</a>'
+  redirect '/game'
+  # '<a href="/oauth/connect">Connect with Instagram</a>'
+end
+
+get "/game" do
+  File.read(File.join('views', 'KingWebPlayer.html'))
 end
 
 get "/oauth/connect" do
@@ -39,7 +44,7 @@ end
 get "/oauth/callback" do
   response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
   session[:access_token] = response.access_token
-  redirect "/nav"
+  redirect "/home"
 end
 
 get "/nav" do
