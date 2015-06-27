@@ -29,12 +29,12 @@ Instagram.configure do |config|
 end
 
 get "/" do
-  redirect '/game'
+  send_file File.join(settings.public_folder, 'splash.html')
   # '<a href="/oauth/connect">Connect with Instagram</a>'
 end
 
-get "/game" do
-  File.read(File.join('views', 'KingWebPlayer.html'))
+get "/games" do
+  send_file File.join(settings.public_folder, 'KingWebPlayer.html')
 end
 
 get "/oauth/connect" do
