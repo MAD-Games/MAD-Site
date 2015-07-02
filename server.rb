@@ -34,7 +34,7 @@ get "/" do
 end
 
 get "/games" do
-  send_file File.join(settings.public_folder, 'KingWebPlayer/KingWebPlayer.html')
+  send_file File.join(settings.public_folder, 'KingWebPlayer.html')
 end
 
 get "/oauth/connect" do
